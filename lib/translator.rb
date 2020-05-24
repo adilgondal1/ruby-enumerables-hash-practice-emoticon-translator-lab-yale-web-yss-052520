@@ -25,7 +25,7 @@ end
 def get_japanese_emoticon(filename,emote)
   data = load_library(filename)
   data.each do |key,value|
-    if data[key][:japanese].eql?(emote)
+    if data[key][:english].eql?(emote)
       return key
     end
   end
