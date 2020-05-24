@@ -19,6 +19,7 @@ def get_english_meaning(filename,emote)
       return key
     end
   end
+  "Sorry, that emoticon was not found"
 end
 
 def get_japanese_emoticon
