@@ -22,6 +22,12 @@ def get_english_meaning(filename,emote)
   "Sorry, that emoticon was not found"
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(filename,emote)
+  data = load_library(filename)
+  data.each do |key,value|
+    if data[key][:japanese].eql?(emote)
+      return key
+    end
+  end
+  "Sorry, that emoticon was not found"
 end
